@@ -16,8 +16,7 @@ while(True):
         test_n(n1)
     except ValueError:
         error()
-    if(decbin == "1"):
-        while(True):
+    while(True):
             try:
                 clean()
                 num = int(input("Digite seu numero!\n\nA: "))
@@ -26,6 +25,7 @@ while(True):
             except:
                 error()
                 continue
+    if(decbin == "1"):    
         bin = " "
         while(num != 0):
             div = int(num/2)
@@ -38,20 +38,12 @@ while(True):
         clean()
         print(f"Decimal: {val}\nBinário: {bino}\n")
     elif(decbin == "2"):
-        while(True):
-            try:
-                clean()
-                num = input("Digite seu número!\n\nA: ")
-                bino = num[::-1]
-                test = int(num)
-                value  = len(num)
-                break
-            except:
-                error()
-                continue
+        clean()
+        num = str(num)
+        bino = num[::-1]
+        value  = len(num)
         resu = 0
         n = 0
-                    # n . 2ⁿ
         for i in range(0, value):
             n = int(bino[i]) * 2 ** (i-1)
             n += n
