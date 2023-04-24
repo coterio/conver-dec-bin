@@ -16,6 +16,7 @@ while(True):
         test_n(n1)
     except ValueError:
         error()
+        continue
     while(True):
             try:
                 clean()
